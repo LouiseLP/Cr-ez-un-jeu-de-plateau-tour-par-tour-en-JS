@@ -1,0 +1,173 @@
+body {
+  background-image: url("./Set/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#ContainerElements {
+  display: flex;
+  justify-content: space-around;
+}
+
+#app {
+  background: red;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  position: relative;
+  margin: 50px 50px 50px 30px;
+}
+.CaseElement {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #4b8e01;
+  position: absolute;
+}
+.texte-joueur {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.nes-container.with-title.is-centered {
+  width: 600px;
+  height: 300px;
+  color: #171717;
+  font-family: "Press Start 2P", cursive;
+  border: thick double;
+  border-color: black;
+  text-align: justify;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+.nes-progress {
+  margin-top: 100px;
+}
+
+.boutonAction {
+  margin-top: 35px;
+  margin-left: 40px;
+}
+
+.GRIS {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #814224;
+}
+#J1,
+#J2 {
+  position: absolute;
+  z-index: 1;
+}
+#W1,
+#W2,
+#W3,
+#W4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: O;
+}
+
+/* Info-bulle */
+img {
+  height: 50px;
+  width: 50px;
+}
+.infobulle {
+  text-decoration: none;
+  position: absolute;
+}
+.infobulle span {
+  display: none;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  color: black;
+  background-color: #eff1f3;
+  font-size: 10px;
+  font-style: italic;
+}
+.infobulle span img {
+  float: left;
+  margin: 0px 8px 8px 0;
+}
+.infobulle:hover span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 250px;
+  min-height: 20px;
+  border: 1px solid black;
+  margin-top: 12px;
+  margin-left: 32px;
+  overflow: hidden;
+  padding: 8px;
+}
+
+#overlay {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  opacity: 0.8;
+  z-index: 2;
+  cursor: pointer;
+}
+#textO {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+#overlayGameOver {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #cd2121;
+  opacity: 0.6;
+  z-index: 2;
+  cursor: pointer;
+}
+#textGameOver {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 1380px) {
+  #ContainerElements {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .texte-joueur {
+    margin-top: 50px;
+  }
+}

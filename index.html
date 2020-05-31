@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8" />
+  <head>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://unpkg.com/nes.css@latest/css/nes.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a class="infobulle">
+      <img src="./Set/info.png" alt=" ? " />
+      <span
+        >A chaque tour, un joueur peut se déplacer d’une à trois cases
+        (horizontalement ou verticalement) avant de terminer son tour.Pour
+        passer son tour, il suffit de presser la touche espace. <br />
+        Il ne peut évidemment pas passer à travers un obstacle. Si un joueur
+        passe sur une case contenant une arme, il laisse son arme actuelle sur
+        place et la remplace par la nouvelle. <br />
+        Si les joueurs se croisent sur des cases adjacentes, un combat à mort
+        s’engage.<br />
+        Lors d'un combat, le fonctionnement du jeu est le suivant :<br />
+        <ul>
+          <li>Chacun attaque à son tour,</li>
+          <li>
+            Les dégâts infligés dépendent de l’arme possédée par le joueur,
+          </li>
+          <li>
+            Le joueur peut choisir d’attaquer ou de se défendre contre le
+            prochain coup,
+          </li>
+          <li>
+            Lorsque le joueur se défend, il encaisse 50% de dégâts en moins
+            qu’en temps normal,
+          </li>
+          <li>
+            Dès que les points de vie d’un joueur (initialement à 100) tombent à
+            0 , celui-ci a perdu.
+          </li>
+        </ul>
+      </span>
+    </a>
+    <div id="ContainerElements">
+      <div id="overlay">
+        <div id="textO">
+          Ready ? Play ! <br />
+          <br />
+          <button type="button" id="Start">START</button>
+        </div>
+      </div>
+      <div id="overlayGameOver">
+        <div id="textGameOver">
+          Game Over !<br />
+          <br />
+          <button type="button" id="Restart">Rejouer</button>
+        </div>
+      </div>
+      <div id="app"></div>
+
+      <div class="texte-joueur">
+        <div class="nes-container with-title is-centered" id="container1">
+          <p class="title" id="joueur1Name"></p>
+          <p id="joueur1Bio"></p>
+
+          <progress
+            class="nes-progress is-success"
+            id="pv1"
+            value="100"
+            max="100"
+          ></progress>
+
+          <div class="boutonAction">
+            <button
+              type="button"
+              disabled
+              class="nes-btn is-warning DefenseButton"
+              id="DefendreJ1"
+              
+            >
+              Defendre !
+            </button>
+            <button
+              type="button"
+              disabled
+              class="nes-btn is-error AttackButton"
+              id="AttaquerJ1"
+            >
+              Attaquer !
+            </button>
+          </div>
+        </div>
+
+        <div class="nes-container with-title is-centered" id="container2">
+          <p class="title" id="joueur2Name"></p>
+          <p id="joueur2Bio"></p>
+
+          <progress
+            class="nes-progress is-success"
+            id="pv2"
+            value="100"
+            max="100"
+          ></progress>
+
+          <div class="boutonAction">
+            <button
+              type="button"
+              disabled
+              class="nes-btn is-warning DefenseButton"
+              id="DefendreJ2"
+              
+              
+            >
+              Defendre !
+            </button>
+            <button
+              type="button"
+              disabled
+              class="nes-btn is-error AttackButton"
+              id="AttaquerJ2"
+            >
+              Attaquer !
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="jquery.js"></script>
+    <script src="./dist/app.bundle.js"></script>
+    <script src="./dist/polyfill.bundle.js"></script>
+  </body>
+</html>
